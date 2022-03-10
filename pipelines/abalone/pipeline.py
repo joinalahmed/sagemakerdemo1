@@ -176,12 +176,12 @@ def get_pipeline(
     )
     xgb_train.set_hyperparameters(
         objective="reg:linear",
-        num_round=100,
-        max_depth=10,
+        num_round=20,
+        max_depth=4,
         eta=0.12,
-        gamma=8,
-        min_child_weight=10,
-        subsample=0.8,
+        gamma=6,
+        min_child_weight=5,
+        subsample=0.4,
         silent=0,
     )
     step_train = TrainingStep(
